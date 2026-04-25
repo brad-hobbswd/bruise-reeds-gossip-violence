@@ -54,22 +54,22 @@ body {
 /* HERO — STABLE SIZE FIX */
 .hero {
     width: 100%;
-    height: clamp(220px, 40vw, 420px);
+    height: clamp(260px, 50vw, 520px); /* 👈 increased size */
     background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
-    background-size: contain; /* ✅ shows full image */
+    background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: #0F1720; /* fills empty space cleanly */
+    background-color: #0F1720;
     position: relative;
 }
 
-/* keep your fade */
+/* fade stays */
 .hero::after {
     content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 70px;
+    height: 80px; /* slightly deeper fade to match size */
     background: linear-gradient(to bottom, transparent, var(--bg-dark));
 }
 
