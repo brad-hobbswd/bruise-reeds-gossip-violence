@@ -51,11 +51,11 @@ body {
     color: var(--gold);
 }
 
-/* HERO — FINAL FIX */
+/* HERO */
 .hero {
-    width: 98%;              /* 👈 almost full width */
-    max-width: 1400px;       /* keeps it clean on large screens */
-    margin: 15px auto 0;     /* small spacing only */
+    width: 98%;
+    max-width: 1400px;
+    margin: 15px auto 0;
     height: clamp(320px, 60vw, 650px);
     background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
     background-size: contain;
@@ -64,10 +64,9 @@ body {
     background-color: #0F1720;
     position: relative;
     overflow: hidden;
-    border-radius: 16px;     /* 👈 slightly softer */
+    border-radius: 16px;
 }
 
-/* subtle animated layer */
 .hero::before {
     content: "";
     position: absolute;
@@ -79,10 +78,9 @@ body {
     opacity: 0.15;
     transform: scale(1);
     animation: slowZoom 20s ease-in-out infinite;
-    z-index: 1; /* 👈 important */
+    z-index: 1;
 }
     
-/* soft fade on ALL sides */
 .hero::after {
     content: "";
     position: absolute;
@@ -93,10 +91,9 @@ body {
         rgba(15, 23, 32, 0.6) 85%,
         rgba(15, 23, 32, 1) 100%
     );
-    z-index: 2; /* 👈 sits ABOVE animation */
+    z-index: 2;
 }
 
-/* animation */
 @keyframes slowZoom {
     0% { transform: scale(1); }
     50% { transform: scale(1.03); }
@@ -161,7 +158,8 @@ p {
 <!-- NAV -->
 <div class="navbar">
 <a href="index.html">Home</a>
-<a href="contents.html">Read</a>
+<a href="introduction.html">Start</a>
+<a href="contents.html">Contents</a>
 <a href="about.html">About</a>
 </div>
 
@@ -184,7 +182,7 @@ This journey does not rush past the pain, nor does it ignore what has been endur
 The words spoken over your life, whether careless or cruel, were never the authority over your identity. A greater voice has always been present, one that restores, redeems, and reminds you that your story is still being written with purpose and with hope.
 </p>
 
-<a href="contents.html" class="button">Begin Reading</a>
+<a href="introduction.html" class="button">Begin Reading</a>
 
 </div>
 </div>
