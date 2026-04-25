@@ -36,21 +36,23 @@ body {
     gap: 20px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .navbar a {
     color: var(--gold-soft);
     text-decoration: none;
+    font-size: 15px;
 }
 
 .navbar a:hover {
     color: var(--gold);
 }
 
-/* TITLE */
+/* HEADER */
 .header {
     text-align: center;
-    padding: 40px 20px 10px;
+    padding: 50px 20px 20px;
 }
 
 .header h1 {
@@ -60,13 +62,14 @@ body {
 
 .header p {
     color: var(--text-muted);
+    font-size: 15px;
 }
 
 /* CONTAINER */
 .container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 15px 40px;
 }
 
 .content-box {
@@ -74,18 +77,24 @@ body {
     max-width: 900px;
 }
 
-/* SECTION CARDS */
+/* SECTION */
 .section {
     background: var(--bg-main);
     margin-bottom: 25px;
-    padding: 20px 25px;
+    padding: 22px 26px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    transition: transform 0.2s ease;
+}
+
+.section:hover {
+    transform: translateY(-2px);
 }
 
 .section h2 {
     color: var(--gold);
     margin-bottom: 15px;
+    font-size: 18px;
 }
 
 /* LINKS */
@@ -93,14 +102,19 @@ body {
     display: block;
     color: var(--text-light);
     text-decoration: none;
-    padding: 6px 0;
+    padding: 7px 0;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    transition: 0.2s;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.links a:last-child {
+    border-bottom: none;
 }
 
 .links a:hover {
     color: var(--gold-soft);
-    padding-left: 5px;
+    padding-left: 6px;
 }
 
 /* FOOTER */
@@ -115,22 +129,27 @@ body {
 
 <body>
 
-<!-- NAV -->
 <div class="navbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Contents</a>
 <a href="about.html">About</a>
 </div>
 
-<!-- HEADER -->
 <div class="header">
 <h1>Table of Contents</h1>
 <p>Bruised Reeds: How Gossip Became Violence in the Church</p>
 </div>
 
-<!-- CONTENT -->
 <div class="container">
 <div class="content-box">
+
+<!-- INTRODUCTION -->
+<div class="section">
+<h2>Introduction</h2>
+<div class="links">
+<a href="introduction.html">When Words Become Weight</a>
+</div>
+</div>
 
 <!-- SECTION 1 -->
 <div class="section">
@@ -187,7 +206,7 @@ body {
 </div>
 </div>
 
-<!-- FINAL -->
+<!-- CONCLUSION -->
 <div class="section">
 <h2>Conclusion</h2>
 <div class="links">
@@ -198,7 +217,6 @@ body {
 </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 © 2026 Bradley Hobbs
 </div>
