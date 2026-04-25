@@ -53,9 +53,7 @@ body {
 
 /* HERO */
 .hero {
-    width: 98%;
-    max-width: 1400px;
-    margin: 15px auto 0;
+    width: 100%;                 /* 👈 full width again */
     height: clamp(320px, 60vw, 650px);
     background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
     background-size: contain;
@@ -64,7 +62,6 @@ body {
     background-color: #0F1720;
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
 }
 
 .hero::before {
@@ -79,19 +76,6 @@ body {
     transform: scale(1);
     animation: slowZoom 20s ease-in-out infinite;
     z-index: 1;
-}
-    
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        ellipse at center,
-        transparent 60%,
-        rgba(15, 23, 32, 0.6) 85%,
-        rgba(15, 23, 32, 1) 100%
-    );
-    z-index: 2;
 }
 
 @keyframes slowZoom {
