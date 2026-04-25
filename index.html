@@ -56,13 +56,14 @@ body {
     width: 100%;
     height: clamp(220px, 40vw, 420px);
     background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
-    background-size: cover;
-    background-position: center top;
+    background-size: contain; /* ✅ shows full image */
+    background-position: center center;
     background-repeat: no-repeat;
+    background-color: #0F1720; /* fills empty space cleanly */
     position: relative;
 }
 
-/* fade */
+/* keep your fade */
 .hero::after {
     content: "";
     position: absolute;
