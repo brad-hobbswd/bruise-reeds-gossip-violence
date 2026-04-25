@@ -25,6 +25,7 @@ body {
     font-family: Georgia, serif;
     background: var(--bg-dark);
     color: var(--text-light);
+    overflow-x: hidden;
 }
 
 /* NAV */
@@ -43,28 +44,30 @@ body {
 .navbar a {
     color: var(--gold-soft);
     text-decoration: none;
+    font-size: 15px;
 }
 
 .navbar a:hover {
     color: var(--gold);
 }
 
-/* HERO */
+/* HERO (FIXED SIZE) */
 .hero {
     width: 100%;
-    height: 65vh;
-    min-height: 300px;
-    max-height: 700px;
+    height: 45vh;
+    min-height: 220px;
+    max-height: 500px;
     background: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png') center/cover no-repeat;
     position: relative;
 }
 
+/* subtle fade into page */
 .hero::after {
     content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 120px;
+    height: 80px;
     background: linear-gradient(to bottom, transparent, var(--bg-dark));
 }
 
@@ -74,6 +77,7 @@ body {
     padding: 40px 15px;
     display: flex;
     justify-content: center;
+    margin-top: -40px; /* slight overlap for premium feel */
 }
 
 .card {
@@ -90,19 +94,20 @@ body {
 p {
     line-height: 1.8;
     font-size: clamp(16px, 2.5vw, 18px);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 /* BUTTON */
 .button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 12px 22px;
     background: var(--gold);
     color: black;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .button:hover {
@@ -119,11 +124,17 @@ p {
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
-    .hero { height: 70vh; }
+    .hero {
+        height: 50vh;
+        max-height: 520px;
+    }
 }
 
 @media (min-width: 1024px) {
-    .hero { height: 75vh; }
+    .hero {
+        height: 55vh;
+        max-height: 550px;
+    }
 }
 </style>
 </head>
@@ -137,7 +148,7 @@ p {
 <a href="about.html">About</a>
 </div>
 
-<!-- HERO (NO TEXT) -->
+<!-- HERO (NO TEXT OVERLAY) -->
 <div class="hero"></div>
 
 <!-- CONTENT -->
