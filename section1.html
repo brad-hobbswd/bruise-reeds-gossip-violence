@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Section One | Bruised Reeds</title>
+
+<style>
+:root {
+    --bg-dark: #0F1720;
+    --bg-main: #1C2530;
+    --gold: #D4AF37;
+    --gold-soft: #E6C76B;
+    --text-light: #F5F5F5;
+    --text-muted: #A8B0B8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(15, 23, 32, 0.95);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    color: var(--gold-soft);
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px;
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    width: 100%;
+    max-width: 850px;
+    background: var(--bg-main);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+h1 {
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--gold-soft);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.9;
+    font-size: clamp(16px, 2.5vw, 18px);
+}
+
+/* CHAPTER LIST */
+.chapter-list a {
+    display: block;
+    padding: 10px 0;
+    color: var(--text-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.chapter-list a:hover {
+    color: var(--gold-soft);
+}
+
+/* BUTTON */
+.button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background: var(--gold);
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: var(--gold-soft);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Contents</a>
+<a href="about.html">About</a>
+</div>
+
+<div class="container">
+
+<!-- SECTION TEXT -->
+<div class="card">
+
+<h1>Section One</h1>
+<h2>The Weight of Spiritual Harm</h2>
+
+<p>
+Pain often begins quietly, in whispers that ripple through hearts and relationships. Gossip, judgment, and secrecy leave marks that are invisible yet profound. The wounded soul carries more than hurt; it carries confusion, fear, and doubt. This section explores how spiritual harm manifests in the church and in personal relationships. You will discover how lies, silence, and misunderstanding create hidden wounds, and why the bruised reed bends under pressures that others rarely see. Awareness is the first step toward healing, and understanding the weight of spiritual harm is the foundation for restoration.
+</p>
+
+</div>
+
+<!-- CHAPTER LIST -->
+<div class="card">
+
+<h2>Chapters</h2>
+
+<div class="chapter-list">
+<a href="chapter1.html">1. The Weight of Gossip</a>
+<a href="chapter2.html">2. The Hidden Wounds</a>
+<a href="chapter3.html">3. Silence, Shame, and Isolation</a>
+<a href="chapter4.html">4. The Voice of the Accuser</a>
+<a href="chapter5.html">5. Secrets That Bind</a>
+<a href="chapter6.html">6. Survival Mechanisms and Coping</a>
+<a href="chapter7.html">7. Lies Among the Saints</a>
+<a href="chapter8.html">8. Spiritual Heaviness and Oppression</a>
+<a href="chapter9.html">9. The Role of the Church</a>
+</div>
+
+<a href="chapter1.html" class="button">Start Section</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
