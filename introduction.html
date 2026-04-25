@@ -49,14 +49,54 @@ body {
     color: var(--gold);
 }
 
-/* HERO */
-.hero-strip {
-    height: 220px;
-    background: linear-gradient(
-        rgba(15,23,32,0.4),
-        rgba(15,23,32,0.9)
-    ),
-    url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png') center/cover no-repeat;
+/* HERO (FULL BANNER) */
+.hero {
+    width: 100%;
+    height: clamp(320px, 60vw, 650px);
+    background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #0F1720;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle glow + animation */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    transform: scale(1);
+    animation: slowZoom 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* fade into background */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 55%,
+        rgba(15, 23, 32, 0.4) 75%,
+        rgba(15, 23, 32, 0.8) 90%,
+        rgba(15, 23, 32, 1) 100%
+    );
+    z-index: 2;
+}
+
+/* animation */
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
 }
 
 /* CONTENT */
@@ -64,6 +104,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 30px 15px 50px;
+    margin-top: -30px;
 }
 
 .card {
@@ -115,14 +156,17 @@ p {
 
 <body>
 
+<!-- NAV -->
 <div class="navbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Contents</a>
 <a href="about.html">About</a>
 </div>
 
-<div class="hero-strip"></div>
+<!-- HERO -->
+<div class="hero"></div>
 
+<!-- CONTENT -->
 <div class="container">
 <div class="card">
 
