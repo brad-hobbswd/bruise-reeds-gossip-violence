@@ -51,7 +51,8 @@ body {
 
 /* HERO (FULL BANNER) */
 .hero {
-    width: 100%;
+    width: calc(100% - 20px);   /* 👈 tiny inset, not noticeable */
+    margin: 10px auto 0;        /* centers it */
     height: clamp(320px, 60vw, 650px);
     background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
     background-size: contain;
@@ -60,6 +61,8 @@ body {
     background-color: #0F1720;
     position: relative;
     overflow: hidden;
+    border-radius: 18px;        /* 👈 soft rounding */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
 /* subtle glow + animation */
