@@ -53,8 +53,8 @@ body {
 
 /* HERO */
 .hero {
-    width: 100%;                 /* 👈 full width again */
-    height: clamp(320px, 60vw, 650px);
+    width: 100%;
+   height: clamp(300px, 58vw, 620px);
     background-image: url('954CDC23-F8D5-414F-A655-02DCCB789ABF.png');
     background-size: contain;
     background-position: center center;
@@ -78,17 +78,17 @@ body {
     z-index: 1;
 }
 
-    .hero::after {
+  .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(to bottom, rgba(15,23,32,0) 70%, var(--bg-dark) 100%),
-        linear-gradient(to top, rgba(15,23,32,0) 70%, var(--bg-dark) 100%),
-        linear-gradient(to left, rgba(15,23,32,0) 85%, var(--bg-dark) 100%),
-        linear-gradient(to right, rgba(15,23,32,0) 85%, var(--bg-dark) 100%);
-    
+    background: radial-gradient(
+        ellipse at center,
+        transparent 65%,              /* 👈 more visible image */
+        rgba(15, 23, 32, 0.25) 80%,
+        rgba(15, 23, 32, 0.6) 92%,
+        rgba(15, 23, 32, 1) 100%
+    );
     z-index: 2;
 }
 
